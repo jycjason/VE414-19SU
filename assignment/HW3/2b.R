@@ -1,0 +1,6 @@
+x1<-seq(-1,1,length=1000)
+x2<-seq(-1,1,length=1000)
+x<-matrix(c(x1,x2),c(2,1))
+y<-matrix(c(x1,x2),c(2,1))
+z<-outer(x1,x2,function(x1,x2) x1^2+x2^2-1 )
+contour(x1,x2,z,levels=0)
